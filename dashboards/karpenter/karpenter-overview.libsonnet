@@ -1262,7 +1262,7 @@ local pieQueryOptions = pieChartPanel.queryOptions;
         ),
         tbOverride.byName.new('Instance Memory') +
         tbOverride.byName.withPropertiesFromOptions(
-          tbStandardOptions.withUnit('decmbytes')
+          tbStandardOptions.withUnit('mbytes')
         ),
       ]),
 
