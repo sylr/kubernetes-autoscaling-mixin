@@ -631,7 +631,7 @@ local tsLegend = tsOptions.legend;
     'kubernetes-autoscaling-mixin-karpenter-perf.json': if $._config.karpenter.enabled then
       $._config.bypassDashboardValidation +
       dashboard.new(
-        'Kubernetes / Autoscaling / Karpenter / Performance',
+        'Kubernetes Karpenter Performance',
       ) +
       dashboard.withDescription('A dashboard that monitors Karpenter and focuses on Karpenter performance. It is created using the [kubernetes-autoscaling-mixin](https://github.com/adinhodovic/kubernetes-autoscaling-mixin).') +
       dashboard.withUid($._config.karpenterPerformanceDashboardUid) +

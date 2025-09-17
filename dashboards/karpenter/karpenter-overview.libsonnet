@@ -1294,7 +1294,7 @@ local pieQueryOptions = pieChartPanel.queryOptions;
     'kubernetes-autoscaling-mixin-karpenter-over.json': if $._config.karpenter.enabled then
       $._config.bypassDashboardValidation +
       dashboard.new(
-        'Kubernetes / Autoscaling / Karpenter / Overview',
+        'Kubernetes Karpenter Overview',
       ) +
       dashboard.withDescription('A dashboard that monitors Karpenter and focuses on giving a overview for Karpenter. It is created using the [kubernetes-autoscaling-mixin](https://github.com/adinhodovic/kubernetes-autoscaling-mixin).') +
       dashboard.withUid($._config.karpenterOverviewDashboardUid) +

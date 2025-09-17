@@ -840,6 +840,6 @@
       "to": "now"
    },
    "timezone": "utc",
-   "title": "Kubernetes / Autoscaling / Karpenter / Performance",
+   "title": "Kubernetes Karpenter Performance",
    "uid": "kubernetes-autoscaling-mixin-kperf-jkwq"
 }

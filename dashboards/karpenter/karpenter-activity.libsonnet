@@ -118,8 +118,8 @@ local tsLegend = tsOptions.legend;
       tsOptions.tooltip.withSort('desc') +
       tsLegend.withShowLegend(true) +
       tsLegend.withDisplayMode('table') +
-      tsLegend.withPlacement('right') +
-      tsLegend.withCalcs(['lastNotNull', 'mean']) +
+      tsLegend.withPlacement('bottom') +
+      tsLegend.withCalcs(['min', 'mean', 'max', 'lastNotNull']) +
       tsLegend.withSortBy('Mean') +
       tsLegend.withSortDesc(true) +
       tsCustom.withSpanNulls(false),
@@ -147,8 +147,8 @@ local tsLegend = tsOptions.legend;
       tsOptions.tooltip.withSort('desc') +
       tsLegend.withShowLegend(true) +
       tsLegend.withDisplayMode('table') +
-      tsLegend.withPlacement('right') +
-      tsLegend.withCalcs(['lastNotNull', 'mean']) +
+      tsLegend.withPlacement('bottom') +
+      tsLegend.withCalcs(['min', 'mean', 'max', 'lastNotNull']) +
       tsLegend.withSortBy('Mean') +
       tsLegend.withSortDesc(true) +
       tsCustom.withSpanNulls(false),
@@ -187,8 +187,8 @@ local tsLegend = tsOptions.legend;
       tsOptions.tooltip.withSort('desc') +
       tsLegend.withShowLegend(true) +
       tsLegend.withDisplayMode('table') +
-      tsLegend.withPlacement('right') +
-      tsLegend.withCalcs(['lastNotNull', 'mean', 'max']) +
+      tsLegend.withPlacement('bottom') +
+      tsLegend.withCalcs(['min', 'mean', 'max', 'lastNotNull']) +
       tsLegend.withSortBy('Mean') +
       tsLegend.withSortDesc(true) +
       tsCustom.withSpanNulls(false),
@@ -225,8 +225,8 @@ local tsLegend = tsOptions.legend;
       tsOptions.tooltip.withSort('desc') +
       tsLegend.withShowLegend(true) +
       tsLegend.withDisplayMode('table') +
-      tsLegend.withPlacement('right') +
-      tsLegend.withCalcs(['lastNotNull', 'mean', 'max']) +
+      tsLegend.withPlacement('bottom') +
+      tsLegend.withCalcs(['min', 'mean', 'max', 'lastNotNull']) +
       tsLegend.withSortBy('Mean') +
       tsLegend.withSortDesc(true) +
       tsCustom.withSpanNulls(false),
@@ -305,8 +305,8 @@ local tsLegend = tsOptions.legend;
       tsOptions.tooltip.withSort('desc') +
       tsLegend.withShowLegend(true) +
       tsLegend.withDisplayMode('table') +
-      tsLegend.withPlacement('right') +
-      tsLegend.withCalcs(['lastNotNull', 'mean', 'max']) +
+      tsLegend.withPlacement('bottom') +
+      tsLegend.withCalcs(['min', 'mean', 'max', 'lastNotNull']) +
       tsLegend.withSortBy('Mean') +
       tsLegend.withSortDesc(true) +
       tsCustom.withSpanNulls(false),
@@ -360,8 +360,8 @@ local tsLegend = tsOptions.legend;
       tsOptions.tooltip.withSort('desc') +
       tsLegend.withShowLegend(true) +
       tsLegend.withDisplayMode('table') +
-      tsLegend.withPlacement('right') +
-      tsLegend.withCalcs(['lastNotNull', 'mean', 'max']) +
+      tsLegend.withPlacement('bottom') +
+      tsLegend.withCalcs(['min', 'mean', 'max', 'lastNotNull']) +
       tsLegend.withSortBy('Mean') +
       tsLegend.withSortDesc(true) +
       tsCustom.withSpanNulls(false),
@@ -379,7 +379,7 @@ local tsLegend = tsOptions.legend;
     'kubernetes-autoscaling-mixin-karpenter-act.json': if $._config.karpenter.enabled then
       $._config.bypassDashboardValidation +
       dashboard.new(
-        'Kubernetes / Autoscaling / Karpenter / Activity',
+        'Kubernetes Karpenter Activity',
       ) +
       dashboard.withDescription('A dashboard that monitors Karpenter and focuses on Karpenter deletion/creation activity. It is created using the [kubernetes-autoscaling-mixin](https://github.com/adinhodovic/kubernetes-autoscaling-mixin).') +
       dashboard.withUid($._config.karpenterActivityDashboardUid) +
@@ -412,7 +412,7 @@ local tsLegend = tsOptions.legend;
             karpenterNodesTerminatedByNodePoolTimeSeriesPanel,
           ],
           panelWidth=12,
-          panelHeight=6,
+          panelHeight=10,
           startY=1
         ) +
         grid.makeGrid(
@@ -421,7 +421,7 @@ local tsLegend = tsOptions.legend;
             karpenterNodesVoluntaryDisruptionEligibleTimeSeriesPanel,
           ],
           panelWidth=12,
-          panelHeight=6,
+          panelHeight=10,
           startY=7
         ) +
         grid.makeGrid(
@@ -445,7 +445,7 @@ local tsLegend = tsOptions.legend;
             karpenterPodStartupDurationTimeSeriesPanel,
           ],
           panelWidth=12,
-          panelHeight=6,
+          panelHeight=10,
           startY=20
         )
       ) +
