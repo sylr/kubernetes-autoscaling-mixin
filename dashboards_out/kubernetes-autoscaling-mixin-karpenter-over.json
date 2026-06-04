@@ -1547,17 +1547,19 @@
                "options": {
                   "excludeByName": {
                      "Time": true,
-                     "job": true
+                     "job": true,
+                     "region": true
                   },
                   "indexByName": {
-                     "Value #A": 6,
-                     "Value #B": 7,
-                     "instance_cpu": 4,
-                     "instance_memory": 5,
-                     "instance_type": 3,
+                     "Value #A": 7,
+                     "Value #B": 8,
+                     "instance_cpu": 5,
+                     "instance_memory": 6,
+                     "instance_type": 4,
                      "namespace": 0,
                      "node_name": 1,
-                     "nodepool": 2
+                     "nodepool": 2,
+                     "zone": 3
                   },
                   "renameByName": {
                      "Value #A": "CPU Utilization",
@@ -1572,7 +1574,6 @@
                      "node_name": "Node Name",
                      "nodepool": "Node Pool",
                      "os": "OS",
-                     "region": "Region",
                      "zone": "Zone"
                   }
                }

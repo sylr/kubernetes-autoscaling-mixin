@@ -13,8 +13,8 @@ PROMTOOL_BIN=$(BIN_DIR)/promtool
 PINT_BIN=$(BIN_DIR)/pint
 TOOLING=$(JB_BIN) $(JSONNETLINT_BIN) $(JSONNET_BIN) $(JSONNETFMT_BIN) $(PROMTOOL_BIN) $(GRAFANA_DASHBOARD_LINTER_BIN) $(MARKDOWNFMT_BIN) $(VALE_BIN) $(PINT_BIN)
 JSONNETFMT_ARGS=-n 2 --max-blank-lines 2 --string-style s --comment-style s
-SRC_DIR ?=dashboards
-OUT_DIR ?=dashboards_out
+SRC_DIR ?= dashboards
+OUT_DIR ?= dashboards_out
 
 .PHONY: all
 all: fmt generate lint test
